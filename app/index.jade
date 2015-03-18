@@ -2,6 +2,7 @@ doctype html
 html(class="no-js", lang="en")
     include header
     -var company = "Spinnaker"
+    -var sm_company = company.toLowerCase()
     body
 
         .container.teaser
@@ -107,12 +108,22 @@ html(class="no-js", lang="en")
 
                     p.lead Расскажите нам про свой проект в любой удобной для вас форме.
 
-                    p Будь то четко сформулированные требования или просто идея. Мы подберем специалистов под ваши нужды с учетом отраслевой специфики, способа технологической реализации и характера предоставляемой услуги. 
+                    .row
+
+                        p.small-12.medium-5.medium-push-7.large-4.column Все важно! Будь то четко сформулированные требования или просто идея. Мы подберем специалистов под ваши нужды с учетом отраслевой специфики, способа технологической реализации и характера предоставляемой услуги. 
 
 
-                    form(action="")
-
-        .container.footer
+                        form.small-12.medium-7.medium-pull-5.large-6.large-pull-3.column(action="")
+                            label(for="name") Представьтесь
+                            input#name(type="text", name="name" title="Как нам лучше всего вас называть")
+                            label(for="mail") Ваш e-mail
+                            input#mail(type="text", name="name" placeholder="write@mail.com")
+                            label(for="tel") Номер телефона
+                            input#tel(type="text", name="name"  title="Введите в формате 375296351475 или даже +375(29)6351475" placeholder="например 375296351475")
+                            label(for="comm") Ваша идея, проект, пожелания....
+                            textarea#comm(type="text", name="name") 
+                            p.text-right
+                                input.button(type="submit" value="Рассказать")
             footer.row
                 .small-12.medium-4.medium-push-8.column
 
