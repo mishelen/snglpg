@@ -124,15 +124,18 @@ html(class="no-js", lang="en")
                             textarea#comm(type="text", name="name") 
                             p.text-right
                                 input.button(type="submit" value="Рассказать")
+
+        .container.footer
             footer.row
-                .small-12.medium-4.medium-push-8.column
+                .small-12.medium-5.medium-push-7.column
 
                     h2 Контакты
 
                     ul.no-bullet.row 
                         li.small-12.large-6.column
                             h3 Россия
-                            p.lead +7 (497) 440 19 33
+                            p.lead 
+                                a(href="tel:+375446446452") +7 (497) 440 19 33
                             p 105541, Москва, 
                                 br
                                 | Насыпная ул., д. 34
@@ -140,22 +143,26 @@ html(class="no-js", lang="en")
 
                         li.small-12.large-6.column 
                             h3 Беларусь
-                            p.lead +375 (17) 203 42 15
-                            p ул. Перельмана, д. 234
+                            p.lead 
+                                a(href="tel:+375446446452") +375 (17) 203 42 15
+                            p 220125, Минск,
                                 br 
-                                | 220125, Минск,
+                                | ул. Перельмана, д. 234
+                    hr
+
+                    p e-mail: 
+                        a(href="mailto:info@#{sm_company}.com") info@#{sm_company}.com
+                    p скайп: 
+                        a(href="skype:#{sm_company}?add") #{sm_company}
+
+                    hr.hide-for-medium-up
 
 
-                    a(href="mailto:info@#{company.toLowerCase()}.com") info@#{company.toLowerCase()}.com
-                    br
-                    a(href="skype:#{company.toLowerCase()}?add") #{company.toLowerCase()}
 
-
-
-
-                .small-12.medium-8.medium-pull-4.column
+                .small-12.medium-7.medium-pull-5.column
                     ul.no-bullet.row 
-                        li.small-12.medium-4.column: a(href="№") Компания
+                        li.small-12.large-4.column: a(href="№")
+                            h3 Компания
 
                             ul.no-bullet 
                                 li: a(href="№") О компании
@@ -164,7 +171,8 @@ html(class="no-js", lang="en")
                                 li: a(href="№") Новости компании
                                 li: a(href="№") Карьера
 
-                        li.small-12.medium-4.column: a(href="№") Услуги
+                        li.small-12.large-4.column: a(href="№") 
+                            h3 Услуги
 
                             ul.no-bullet
                                 li: a(href="№") ИТ-консалтинг
@@ -177,7 +185,8 @@ html(class="no-js", lang="en")
                                 li: a(href="№") Независимое тестирование
                                 li: a(href="№") Сопровождение и поддержка
 
-                        li.small-12.medium-4.column: a(href="№") Решения
+                        li.small-12.large-4.column: a(href="№") 
+                            h3 Решения
 
                             ul.no-bullet
                                 li: a(href="№") Веб-приложения
