@@ -1,0 +1,71 @@
+@import "settings";
+@import "foundation/components/global";
+@import "foundation/components/type";
+@import "foundation/components/grid";
+
+%prevent-text-breakouts {
+  -ms-word-break: break-all;
+	  word-break: break-all;
+	  word-break: break-word;
+  -webkit-hyphens: auto;
+	 -moz-hyphens: auto;
+		  hyphens: auto;
+}
+
+.container {padding: $paragraph-font-size*3 2%;
+	&.footer {
+		padding-bottom: 0;
+		aside {margin-top: $paragraph-font-size;}
+	}
+	&.header {
+		position: fixed;
+		width: 100%;
+		height: auto;
+		top: 0;left: 0;
+		background-color: #fefefe;
+		z-index: 5;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+}
+
+section.row {
+	padding-bottom: $paragraph-font-size*3;
+	padding-top: $paragraph-font-size*3;
+}
+
+ul {
+	&.no-bullet {
+		li {
+			ul,
+			ol {
+			margin-#{$default-float}: 0;
+			}
+		}
+	}
+}
+
+
+h3 {
+	font-weight: 600;
+	font-size: $paragraph-font-size;
+}
+
+// p {@extend %prevent-text-breakouts;}
+
+.listing {
+	li {
+		margin-bottom: $paragraph-font-size;
+		margin-top: $paragraph-font-size;
+		@include grid-column(12);
+		@media #{$medium-only} { 
+			@include grid-column(4);
+			&:nth-of-type(3n+1) {clear: left;}
+		}
+		@media #{$large-up} { 
+			@include grid-column(3);
+			&:nth-of-type(4n+1) {clear: left;}
+		}
+
+	}
+}
