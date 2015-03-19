@@ -59,12 +59,12 @@ h3 {
 		margin-top: $paragraph-font-size;
 		@include grid-column(12);
 		@media #{$medium-only} { 
-			@include grid-column(4);
-			&:nth-of-type(3n+1) {clear: left;}
+			@include grid-column(6);
+			&:nth-of-type(2n+1) {clear: left;}
 		}
 		@media #{$large-up} { 
-			@include grid-column(3);
-			&:nth-of-type(4n+1) {clear: left;}
+			@include grid-column(4);
+			&:nth-of-type(3n+1) {clear: left;}
 		}
 
 	}
@@ -74,3 +74,16 @@ textarea {
 	resize: vertical;
 	min-height: $paragraph-font-size*6;
 }
+
+
+span.ic {
+		font-size: 1.5em;
+		display: inline;
+		vertical-align: baseline;
+		line-height: 0.5;
+		position: relative;
+		top: 0.1em;
+		margin-right: 0.5em;
+		margin-left: 0.25em;
+		color: $header-font-color;
+	}
