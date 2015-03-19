@@ -66,9 +66,31 @@ h3 {
 			@include grid-column(4);
 			&:nth-of-type(3n+1) {clear: left;}
 		}
+		@media #{$large-up} { 
+			@include grid-column(4);
+			&:nth-of-type(3n+1) {clear: left;}
+		}
 
 	}
 }
+
+.listing-imaged {
+	li {
+		@include grid-column(4);
+		@media #{$small-only} { 
+			&:nth-of-type(3n+1) {clear: left;}
+		}
+		@media #{$medium-only} { 
+			@include grid-column(3);
+			&:nth-of-type(4n+1) {clear: left;}
+		}
+		@media #{$large-up} { 
+			@include grid-column(2);
+			&:nth-of-type(6n+1) {clear: left;}
+		}
+	}
+}
+
 
 textarea {
 	resize: vertical;
@@ -85,5 +107,4 @@ span.ic {
 		top: 0.1em;
 		margin-right: 0.5em;
 		margin-left: 0.25em;
-		color: $header-font-color;
-	}
+		color: $header-font-color;}

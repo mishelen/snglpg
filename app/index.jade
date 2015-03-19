@@ -176,6 +176,26 @@ html(class="no-js", lang="en")
 
                     p Сотрудничая с #{company}, наши клиенты получают в свое распоряжение профессионалов с системным мышлением и творческим подходом, широчайший спектр технологий, отлаженные и проверенные временем методологии управления проектами, опыт успешно выполненных проектов, доскональный контроль качества и гибкие модели сотрудничества.
 
+        .container
+            section.row
+                .column
+                    h2 Примеры работ
+                    ul.listing-imaged.no-bullet.row.collapse
+                        - for (var x = 1; x < 18; x++)
+                            li.column
+                                img(src="imgs/folio-#{x}.jpg", alt="Работа # #{x}")
+
+
+
+
+        .container
+            section.row
+                .column
+                    h2 C нами работают
+                    ul.listing-imaged.no-bullet.row
+                        - for (var x = 1; x < 17; x++)
+                            li.column
+                                img(src="imgs/#{x}.png", alt="Клиент # #{x}")
 
         .container
             section.row
