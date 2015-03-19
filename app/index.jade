@@ -5,7 +5,7 @@ html(class="no-js", lang="en")
     -var sm_company = company.toLowerCase()
     body
 
-        .container.teaser
+        .container.teaser.revert
             section.row
                 .small-12.medium-7.large-5.column
                     h1 #{company}
@@ -197,7 +197,7 @@ html(class="no-js", lang="en")
                             li.column
                                 img(src="imgs/#{x}.png", alt="Клиент # #{x}")
 
-        .container
+        .container.order
             section.row
                 .column
 
@@ -222,7 +222,7 @@ html(class="no-js", lang="en")
                             p.text-right
                                 input.button(type="submit" value="Рассказать")
 
-        .container.footer
+        .container.footer.revert
             footer.row
                 .small-12.medium-5.medium-push-7.column
 
@@ -296,7 +296,9 @@ html(class="no-js", lang="en")
 
 
 
-                aside.column
+        .container.revert.copyrights
+            aside.row
+                .column
                     p.left 2013 — 2015 © #{company}. Все права защищены
                     p.right
                         a(href="fsd") Политика конфеденциальности

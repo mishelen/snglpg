@@ -14,9 +14,14 @@
 
 .container {padding: $paragraph-font-size*3 2%;
 	&.footer {
-		padding-bottom: 0;
-		aside {margin-top: $paragraph-font-size;}
+		background-color: $monsoon;
+		li li a {font-size: .8em;}
 	}
+	&.teaser {
+		width: 100%;
+		height: 100%;
+	}
+
 	&.header {
 		position: fixed;
 		width: 100%;
@@ -26,6 +31,16 @@
 		z-index: 5;
 		padding-top: 0;
 		padding-bottom: 0;
+	}
+	&.copyrights {
+		background-color: $charcoal;
+		padding-bottom: $paragraph-font-size;
+		padding-top: $paragraph-font-size;
+		p {margin: 0;}
+		color: $monsoon;
+		a {
+			color: $monsoon;
+		}
 	}
 }
 
@@ -70,7 +85,7 @@ h3 {
 			@include grid-column(4);
 			&:nth-of-type(3n+1) {clear: left;}
 		}
-
+		br + a {font-size: .8em;}
 	}
 }
 
@@ -107,4 +122,37 @@ span.ic {
 		top: 0.1em;
 		margin-right: 0.5em;
 		margin-left: 0.25em;
-		color: $header-font-color;}
+		color: $header-font-color;
+}
+
+
+.teaser {
+	background-image: url("../imgs/showimg.jpg");
+	background-position: center right;
+	background-size: cover;
+}
+
+.order {
+	background-image: url("../imgs/34 East Coast Race1.jpg");
+	background-position: center left;
+	background-size: cover;
+}
+
+
+.revert {
+	color: $smoke;
+	@for $i from 1 through 3 {
+		h#{$i} { color: white;
+		}
+	}
+	a {
+		color: $smoke;
+		&:hover,
+		&:focus {
+			color: $white;
+		}
+	}
+	span.ic {
+		color:$white;
+	}
+}
