@@ -6,9 +6,22 @@ html(class="no-js", lang="en")
     body
 
         .container.teaser.revert
+            div.navigate(data-magellan-expedition="fixed" data-options="threshold : 480;destination_threshold : 20;duration : 1000")
+                .row
+                    .column
+                        .logo.left
+                            a(href="index.html") #{company}
+                        dl.sub-nav.right.hide-for-small-only
+                            dd(data-magellan-arrival="advantages")
+                                a(href="#advantages") Преимущества
+                            dd(data-magellan-arrival="mission")
+                                a(href="#mission") Миссия
+                            dd(data-magellan-arrival="showme")
+                                a(href="#showme") Фолио
+                            dd(data-magellan-arrival="order")
+                                a(href="#order") Приступим!
             section.row
                 .small-12.medium-7.large-5.column
-                    h1 #{company}
                     h2 Попутный ветер
                     p.lead Полный комплекс услуг по разработке, внедрению и сопровождению программных решений более чем 30-ти клиентам. Только высококвалифицированные ИТ-специалисты. Различная сложность и масштаб проектов.
 
@@ -145,7 +158,8 @@ html(class="no-js", lang="en")
                                         a(href="#") Подробнее
 
 
-        .container
+        .container(data-magellan-destination="advantages")
+            a(name="advantages")
             section.row
                 h2.column Преимущества
                 .small-12.medium-5.large-5.column
@@ -165,23 +179,24 @@ html(class="no-js", lang="en")
                             h3 Формирование компетентных команд
                             p Благодаря высокому уровню менеджеров, наличию корпоративного обучения, сложным и интересным задачам мы привлекаем лучших сотрудников, из которых впоследствии формируются сильные проектные команды. В #{company} работают профессионалы, за плечами которых от 2-х до 10-ти лет опыта работы в ИТ-сфере. Для каждого проекта мы формируем выделенные команды – разработчиков, программных архитекторов, бизнес-аналитиков, специалистов по контролю качества, координатора и руководителя проекта – с учетом навыков каждого из участников. Это позволяет достичь высокой слаженности работы команды.
 
-
-        .container
+        .container.mission(data-magellan-destination="mission")
+            a(name="mission")
             section.row
                 .medium-8.column
 
                     p.lead 
-                        strong Миссия 
+                        strong(data-magellan-destination="mission") Миссия 
                         |#{company} – оказывать всестороннюю помощь нашим клиентам в создании и развитии ИТ-систем, способствующих успеху их бизнеса. Мы предоставляем весь комплекс услуг в сфере профессиональной разработки заказного программного обеспечения, интеграции приложений, стратегического и технологического ИТ-консалтинга, тестирования, сопровождения и поддержки ПО.
 
                     p Сотрудничая с #{company}, наши клиенты получают в свое распоряжение профессионалов с системным мышлением и творческим подходом, широчайший спектр технологий, отлаженные и проверенные временем методологии управления проектами, опыт успешно выполненных проектов, доскональный контроль качества и гибкие модели сотрудничества.
 
-        .container
+        .container(data-magellan-destination="showme")
+            a(name="showme")
             section.row
                 .column
                     h2 Примеры работ
                     ul.listing-imaged.no-bullet.row.collapse
-                        - for (var x = 1; x < 18; x++)
+                        - for (var x = 1; x < 13; x++)
                             li.column
                                 img(src="imgs/folio-#{x}.jpg", alt="Работа # #{x}")
 
@@ -193,15 +208,16 @@ html(class="no-js", lang="en")
                 .column
                     h2 C нами работают
                     ul.listing-imaged.no-bullet.row
-                        - for (var x = 1; x < 17; x++)
+                        - for (var x = 1; x < 13; x++)
                             li.column
                                 img(src="imgs/#{x}.png", alt="Клиент # #{x}")
 
-        .container.order
+        .container.order(data-magellan-destination="order")
+            a(name="order")
             section.row
                 .column
 
-                    h2 Приступаем
+                    h2 Отчаливаем
 
                     p.lead Расскажите нам про свой проект в любой удобной для вас форме.
 

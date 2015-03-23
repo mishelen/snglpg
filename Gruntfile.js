@@ -73,9 +73,9 @@ module.exports = function(grunt) {
 			target: {
 				files: [{
 					expand: true,
-					cwd: '<%= app %>/images/',
+					cwd: '<%= app %>/imgs/',
 					src: ['**/*.{jpg,gif,svg,jpeg,png}'],
-					dest: '<%= dist %>/images/'
+					dest: '<%= dist %>/imgs/'
 				}]
 			}
 		},
@@ -116,7 +116,7 @@ module.exports = function(grunt) {
 				tasks: ['jade']
 			},
 			livereload: {
-				files: ['<%= app %>/**/*.html', '!<%= app %>/bower_components/**', '<%= app %>/js/**/*.js', '<%= app %>/css/**/*.css', '<%= app %>/images/**/*.{jpg,gif,svg,jpeg,png}'],
+				files: ['<%= app %>/**/*.html', '!<%= app %>/bower_components/**', '<%= app %>/js/**/*.js', '<%= app %>/css/**/*.css', '<%= app %>/imgs/**/*.{jpg,gif,svg,jpeg,png}'],
 				options: {
 					livereload: true
 				}
@@ -130,7 +130,7 @@ module.exports = function(grunt) {
 					base: '<%= app %>/',
 					open: true,
 					livereload: true,
-					hostname: '127.0.0.1'
+					hostname: '0.0.0.0'
 				}
 			},
 			dist: {
