@@ -19,8 +19,8 @@ var app = (function(document, $) {
 	};
 })(document, jQuery);
 
-var folio = new Swiper('.singlefolio', {
-	pagination: '.singlefolio-p',
+var folio_in_folio = new Swiper('.folio_in_folio', {
+	pagination: '.folio_in_folio-p',
 	grabCursor: true,
 	paginationClickable: true,
 	autoplay: 2000,

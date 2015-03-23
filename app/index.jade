@@ -201,27 +201,46 @@ html(class="no-js", lang="en")
                         - for (var x = 1; x < 13; x++)
                             li.column
                                 case x
+                                    when 3
                                     when 8
-                                        figure.swiper-container.singlefolio
+                                    when 11
+                                        figure.swiper-container.folio_in_folio
                                             figure.swiper-wrapper
                                                 img.swiper-slide(src="imgs/folio-#{x}.jpg", alt="Работа # #{x}")
-                                                img.swiper-slide(src="imgs/folio-15.jpg", alt="Работа # #{x}")
-                                                img.swiper-slide(src="imgs/folio-14.jpg", alt="Работа # #{x}")
-                                            figcaption.swiper-pagination.singlefolio-p
+                                                img.swiper-slide(src="imgs/folio-#{x % 17 - 1}.jpg", alt="Работа # #{x}")
+                                                img.swiper-slide(src="imgs/folio-#{x % 17 - 2}.jpg", alt="Работа # #{x}")
+                                            figcaption
                                                 h3 Работа # #{x}
-                                                button.right
-                                                    .ic.lcons-see
-                                                button.right
-                                                    .ic.lcons-star
+                                                small: a(href="") print
+                                                |  
+                                                small: a(href="") big data
+                                                |  
+                                                small: a(href="") machine learning
+
+                                                .text-right
+                                                    button
+                                                        .ic.lcons-see
+                                                    button
+                                                        .ic.lcons-star
+                                            .swiper-pagination.folio_in_folio-p
                                     default
                                         figure
                                             img(src="imgs/folio-#{x}.jpg", alt="Работа # #{x}")
                                             figcaption
                                                 h3 Работа # #{x}
-                                                button.right
-                                                    .ic.lcons-see
-                                                button.right
-                                                    .ic.lcons-star
+                                                small: a(href="") web
+                                                |  
+                                                small: a(href="") ID
+                                                |  
+                                                small: a(href="") development
+                                                |  
+                                                small: a(href="") research
+
+                                                .text-right
+                                                    button
+                                                        .ic.lcons-see
+                                                    button
+                                                        .ic.lcons-star
 
 
 

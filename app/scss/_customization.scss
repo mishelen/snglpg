@@ -91,16 +91,19 @@ h3 {
 			@include grid-column(3);
 			&:nth-of-type(4n+1) {clear: left;}
 		}
-		br + a {font-size: .8em;}
 	}
 }
 
 .showme {
+
+	li > figure {
+		overflow: hidden;
+	}
+
 	figure {
 		margin: 0;
 		padding: 0;
 		position: relative;
-		overflow: hidden;
 		&:hover {
 			figcaption {
 				bottom: 0;
@@ -109,12 +112,10 @@ h3 {
 				}
 			}
 		}
-		&.singlefolio {
-			// overflow: visible;
-		}
 	}
 	figcaption {
 		position: absolute;
+		z-index: 1;
 		padding: 1em;
 		background: rgba(white, 0.77);
 		left: 0;
@@ -248,9 +249,17 @@ span.ic {
 	}
 }
 
+.swiper-pagination {
+	text-align: left;
+	padding-left: 1em;
+}
+
 .swiper-pagination-bullet {
 		background-color: $base;
+		border: 1px solid $white;
 	&-active {
 		background-color: $primary-color;
+		border-color: $oil;
 	}
 }
+
