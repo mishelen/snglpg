@@ -141,6 +141,7 @@ h3 {
 				border-color: scale-color($primary-color, $saturation: -35%, $lightness: 25%);
 
 			}
+
 			&:active {
 				transform: scale(1.3);
 			}
@@ -263,3 +264,25 @@ span.ic {
 	}
 }
 
+.tabs {
+	border-bottom: 1px solid $smoke;
+	.tab-title {
+		margin-bottom: -1px !important;
+		a {
+			background-color: transparent;
+			h2 {
+				color: $base;
+			}
+		}
+
+		&.active {
+			border-bottom: 1px solid $oil;
+			a {
+				background-color: transparent;
+				h2 {
+					color: $oil;
+				}
+			}
+		}
+	}
+}
