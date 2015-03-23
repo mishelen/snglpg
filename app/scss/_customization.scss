@@ -130,12 +130,21 @@ span.ic {
 
 
 .mission {
-	background-image: url("../imgs/13.png");
-	background-position: calc(100% + 400px) center;
-	background-size: contain;
-	background-repeat: no-repeat;
+	@media #{$medium-up} {  
+		background-image: url("../imgs/1941.png");
+		background-position: calc(100% + 100px) center;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+	@media #{$large-up} {
+		background-position: calc(100% - 100px) center;
+	}
 }
 
+
+.plane {
+	background-color: rgba(white, 0.85);
+}
 
 .revert {
 	color: $smoke;
