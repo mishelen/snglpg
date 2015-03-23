@@ -35,6 +35,8 @@
 	}
 }
 
+.navigate {padding: $paragraph-font-size 2%;}
+
 section.row {
 	padding-bottom: $paragraph-font-size*3;
 	padding-top: $paragraph-font-size*3;
@@ -71,10 +73,6 @@ h3 {
 			&:nth-of-type(3n+1) {clear: left;}
 		}
 
-		@media #{$large-up} { 
-			@include grid-column(4);
-			&:nth-of-type(3n+1) {clear: left;}
-		}
 		br + a {font-size: .8em;}
 	}
 }
@@ -114,6 +112,7 @@ span.ic {
 		margin-left: 0.25em;
 		color: $header-font-color;
 }
+
 
 
 .teaser {
@@ -185,5 +184,12 @@ span.ic {
 			font-size: $h3-font-size;
 		}
 
+	}
+}
+
+.swiper-pagination-bullet {
+		background-color: $base;
+	&-active {
+		background-color: $primary-color;
 	}
 }

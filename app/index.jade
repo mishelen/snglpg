@@ -195,11 +195,31 @@ html(class="no-js", lang="en")
             section.row
                 .column
                     h2 Примеры работ
-                    ul.listing-imaged.no-bullet.row.collapse
+                    ul.listing-imaged.showme.no-bullet.row.collapse
                         - for (var x = 1; x < 13; x++)
                             li.column
-                                img(src="imgs/folio-#{x}.jpg", alt="Работа # #{x}")
-
+                                case x
+                                    when 8
+                                        figure.swiper-container.singlefolio
+                                            figure.swiper-wrapper
+                                                img.swiper-slide(src="imgs/folio-#{x}.jpg", alt="Работа # #{x}")
+                                                img.swiper-slide(src="imgs/folio-15.jpg", alt="Работа # #{x}")
+                                                img.swiper-slide(src="imgs/folio-14.jpg", alt="Работа # #{x}")
+                                            figcaption.swiper-pagination.singlefolio-p
+                                                h3 Работа # #{x}
+                                                button
+                                                    span.ic.lcons-location
+                                                button
+                                                    span.ic.lcons-news
+                                    default
+                                        figure
+                                            img(src="imgs/folio-#{x}.jpg", alt="Работа # #{x}")
+                                            figcaption
+                                                h3 Работа # #{x}
+                                                button
+                                                    span.ic.lcons-location
+                                                button
+                                                    span.ic.lcons-news
 
 
 
@@ -207,10 +227,11 @@ html(class="no-js", lang="en")
             section.row
                 .column
                     h2 C нами работают
-                    ul.listing-imaged.no-bullet.row
-                        - for (var x = 1; x < 13; x++)
-                            li.column
-                                img(src="imgs/#{x}.png", alt="Клиент # #{x}")
+                    .swiper-container.clientlist
+                        ul.listing-imaged.no-bullet.row.collapse.swiper-wrapper
+                            - for (var x = 1; x < 13; x++)
+                                li.column.swiper-slide
+                                    img(src="imgs/#{x}.png", alt="Клиент # #{x}")
 
         .container.order(data-magellan-destination="order")
             a(name="order")
