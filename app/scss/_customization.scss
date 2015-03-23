@@ -96,9 +96,7 @@ h3 {
 
 .showme {
 
-	li > figure {
-		overflow: hidden;
-	}
+	li > figure { overflow: hidden; }
 
 	figure {
 		margin: 0;
@@ -113,6 +111,7 @@ h3 {
 			}
 		}
 	}
+
 	figcaption {
 		position: absolute;
 		z-index: 1;
@@ -148,6 +147,7 @@ h3 {
 		}
 	}
 }
+
 
 textarea {
 	resize: vertical;
@@ -208,6 +208,7 @@ span.ic {
 			text-shadow: 1px 1px 1px rgba($oil, 0.3);
 		}
 	}
+
 	a {
 		color: $smoke;
 		text-shadow: 1px 1px 1px rgba($oil, 0.3);
@@ -216,6 +217,7 @@ span.ic {
 			color: $white;
 		}
 	}
+
 	span.ic {
 		color:$white;
 		text-shadow: 1px 1px 1px rgba($oil, 0.3);
