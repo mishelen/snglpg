@@ -1,17 +1,39 @@
 'use strict';
 
-var app = (function(document, $) {
+var app = (function (document, $) {
+	var option = {
+		clientlist: {
+			grabCursor: true,
+			spaceBetween: 33,
+			slidesPerView: 'auto',
+			centeredSlides: true,
+			autoplay: 3140,
+			autoplayDisableOnInteraction: true
+		}
+	};
 	var docElem = document.documentElement,
-		_userAgentInit = function() {
+		_userAgentInit = function () {
 			docElem.setAttribute('data-useragent', navigator.userAgent);
 		},
-		_init = function() {
+		_init = function () {
 			$(document).foundation();
-			// // needed to use joyride
-			// // doc: http://foundation.zurb.com/docs/components/joyride.html
-			// $(document).on('click', '#start-jr', function () {
-			//     $(document).foundation('joyride', 'start');
-			// });
+
+			var folio = document.getElementsByClassName('folio_in_folio'),
+				folioSwipers = [];
+
+			var clientListSwiper = new Swiper('.clientlist', option.clientlist);
+			
+			for (var i = folio.length - 1; i >= 0; i--) {
+				folioSwipers.push(new Swiper(folio[i], {
+					pagination: folio[i].getElementsByClassName('folio_in_folio-p')[0],
+					grabCursor: true,
+					paginationClickable: true,
+					autoplay: 3140,
+					autoplayDisableOnInteraction: true,
+					loop: true
+				}));
+			}
+
 			_userAgentInit();
 		};
 	return {
@@ -19,27 +41,6 @@ var app = (function(document, $) {
 	};
 })(document, jQuery);
 
-var folio_in_folio = new Swiper('.folio_in_folio', {
-	pagination: '.folio_in_folio-p',
-	grabCursor: true,
-	paginationClickable: true,
-	autoplay: 2000,
-	autoplayDisableOnInteraction: true,
-	loop: true
-});
-var client = new Swiper('.clientlist', {
-	grabCursor: true,
-	spaceBetween: 33,
-	slidesPerView: 'auto',
-	centeredSlides: true,
-	autoplay: 2000,
-	autoplayDisableOnInteraction: true
-});
-
-
-
-
-
-(function() {
+(function () {
 	app.init();
 })();

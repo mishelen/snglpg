@@ -1,7 +1,8 @@
 {
-  "name": "zf5_project",
-  "dependencies": {
-    "foundation": "zurb/bower-foundation",
-    "swiper": "~3.0.4"
-  }
+	"name": "zf5_project",
+	"dependencies": {
+		"foundation": "zurb/bower-foundation",
+		"swiper": "~3.0.4",
+		"modernizr": "2.8.3"
+	}
 }

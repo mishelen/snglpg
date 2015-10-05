@@ -156,6 +156,14 @@ module.exports = function(grunt) {
 					'foundation'
 				]
 			}
+		},
+
+		'gh-pages': {
+			options: {
+				base: 'dist',
+				message: 'Auto-generated commit'
+			},
+			src: ['**/*']
 		}
 
 	});
@@ -169,5 +177,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('server-dist', ['connect:dist']);
 	
 	grunt.registerTask('publish', ['compile-jade', 'compile-sass', 'clean:dist', 'validate-js', 'useminPrepare', 'copy:dist', 'newer:imagemin', 'concat', 'cssmin', 'uglify', 'usemin']);
+
+	grunt.registerTask('ghp', ['gh-pages']);
 
 };
