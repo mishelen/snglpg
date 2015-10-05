@@ -1,0 +1,112 @@
+@font-face {
+	font-family: 'exo_2.0';
+	src: url('../fonts/exo_2.0_thin.eot');
+	src: url('../fonts/exo_2.0_thin.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/exo_2.0_thin.woff') format('woff'),
+		 url('../fonts/exo_2.0_thin.ttf') format('truetype'),
+		 url('../fonts/exo_2.0_thin.svg#exo_2.0thin') format('svg');
+	font-weight: 100;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'exo_2.0';
+	src: url('../fonts/exo_2.0_light.eot');
+	src: url('../fonts/exo_2.0_light.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/exo_2.0_light.woff') format('woff'),
+		 url('../fonts/exo_2.0_light.ttf') format('truetype'),
+		 url('../fonts/exo_2.0_light.svg#exo_2.0light') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'exo_2.0';
+	src: url('../fonts/exo_2.0_medium.eot');
+	src: url('../fonts/exo_2.0_medium.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/exo_2.0_medium.woff') format('woff'),
+		 url('../fonts/exo_2.0_medium.ttf') format('truetype'),
+		 url('../fonts/exo_2.0_medium.svg#exo_2.0medium') format('svg');
+	font-weight: 600;
+	font-style: normal;
+}
+
+$icon-font-namespace: "lcons";
+$ic: $icon-font-namespace;
+
+
+@font-face {
+	font-family: "#{$ic}";
+	src: url("../fonts/#{$ic}.eot");
+	src: url("../fonts/#{$ic}.eot#iefix") format("embedded-opentype"),
+	url("../fonts/#{$ic}.woff") format("woff"),
+	url("../fonts/#{$ic}.ttf") format("truetype"),
+	url("../fonts/#{$ic}.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+.ic {
+	font-family: #{$ic};
+	font-size: 2rem;
+	font-style: normal;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	
+}
+
+
+.#{$ic}-banknote:before {content: "\e000"; }
+.#{$ic}-star:before {content: "\e001"; }
+.#{$ic}-speacker:before {content: "\e002"; }
+.#{$ic}-trash:before {content: "\e003"; }
+.#{$ic}-blockade:before {content: "\e004"; }
+.#{$ic}-bubble:before {content: "\e005"; }
+.#{$ic}-camera_v:before {content: "\e006"; }
+.#{$ic}-camera_p:before {content: "\e007"; }
+.#{$ic}-cup:before {content: "\e008"; }
+.#{$ic}-data:before {content: "\e009"; }
+.#{$ic}-diamonds:before {content: "\e00a"; }
+.#{$ic}-display:before {content: "\e00b"; }
+.#{$ic}-fire:before {content: "\e00c"; }
+.#{$ic}-heart:before {content: "\e00d"; }
+.#{$ic}-lab:before {content: "\e00e"; }
+.#{$ic}-leaf:before {content: "\e00f"; }
+.#{$ic}-like:before {content: "\e010"; }
+.#{$ic}-location:before {content: "\e011"; }
+.#{$ic}-news:before {content: "\e012"; }
+.#{$ic}-noodle:before {content: "\e013"; }
+.#{$ic}-note:before {content: "\e014"; }
+.#{$ic}-packet:before {content: "\e015"; }
+.#{$ic}-paperclip:before {content: "\e016"; }
+.#{$ic}-paperplane:before {content: "\e017"; }
+.#{$ic}-parameters:before {content: "\e018"; }
+.#{$ic}-pen:before {content: "\e019"; }
+.#{$ic}-phone:before {content: "\e01a"; }
+.#{$ic}-photo:before {content: "\e01b"; }
+.#{$ic}-search:before {content: "\e01c"; }
+.#{$ic}-see:before {content: "\e01d"; }
+.#{$ic}-settings:before {content: "\e01e"; }
+.#{$ic}-shop:before {content: "\e01f"; }
+.#{$ic}-watch:before {content: "\e020"; }
+.#{$ic}-key:before {content: "\e021"; }
+.#{$ic}-calendar:before {content: "\e022"; }
+.#{$ic}-delievery:before {content: "\e023"; }
+.#{$ic}-cloud:before {content: "\e024"; }
+.#{$ic}-evrika:before {content: "\e025"; }
+.#{$ic}-sound:before {content: "\e026"; }
+.#{$ic}-stack:before {content: "\e027"; }
+.#{$ic}-study:before {content: "\e028"; }
+.#{$ic}-tshirt:before {content: "\e029"; }
+.#{$ic}-tag:before {content: "\e02a"; }
+.#{$ic}-tv:before {content: "\e02b"; }
+.#{$ic}-user:before {content: "\e02c"; }
+.#{$ic}-vynil:before {content: "\e02d"; }
+.#{$ic}-wallet:before {content: "\e02e"; }
+.#{$ic}-world:before {content: "\e02f"; }
